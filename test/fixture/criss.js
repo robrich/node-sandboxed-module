@@ -1,4 +1,6 @@
-cross = require('./cross');
+'use strict';
 
-module.exports.cross = cross
+var cross = require('./cross');
+
+module.exports.cross = cross;
 module.exports.value = 'criss value';

@@ -1,3 +1,5 @@
+'use strict';
+
 var assert = require('assert');
 var SandboxedModule = require('../..');
 
@@ -6,6 +8,8 @@ var localModule = SandboxedModule.load(path);
 var locals = localModule.exports;
 
 for (var key in localModule.local) {
-  assert.ok(locals[key], key + ' is local');
-  assert.ok(!localModule.global[key], key + ' is not global');
+  if (localModule.hasOwnProperty(key)) {
+    assert.ok(locals[key], key + ' is local');
+    assert.ok(!localModule.global[key], key + ' is not global');
+  }
 }

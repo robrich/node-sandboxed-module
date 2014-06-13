@@ -1,4 +1,6 @@
-criss = require('./criss');
+'use strict';
 
-module.exports.criss = criss
+var criss = require('./criss');
+
+module.exports.criss = criss;
 module.exports.value = 'cross value';

@@ -1,3 +1,5 @@
+'use strict';
+
 var assert = require('assert');
 var SandboxedModule = require('../..');
 
@@ -10,9 +12,11 @@ assert.strictEqual(globals.GLOBAL, globals.global);
 assert.strictEqual(globals.root, globals.global);
 
 for (var key in global) {
-  if (/global|root/i.test(key)) {
-    continue;
-  }
+  if (global.hasOwnProperty(key)) {
+    if (/global|root/i.test(key)) {
+      continue;
+    }
 
-  assert.strictEqual(globals[key], global[key], key);
+    assert.strictEqual(globals[key], global[key], key);
+  }
 }

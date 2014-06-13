@@ -1,3 +1,5 @@
+'use strict'
+
 class coffeeClass
   simpleData: ->
     1 + 1

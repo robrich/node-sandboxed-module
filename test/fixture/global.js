@@ -1,3 +1,7 @@
+'use strict';
+
 for (var key in global) {
-  exports[key] = global[key];
+  if (global.hasOwnProperty(key)) {
+    exports[key] = global[key];
+  }
 }

@@ -1,3 +1,4 @@
+//jshint undef:false, strict:false
 module.exports = {
   biz: function(){
     return 1 + 3;

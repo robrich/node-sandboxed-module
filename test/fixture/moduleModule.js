@@ -1,3 +1,5 @@
+'use strict';
+
 var Module = require('module');
 
 var parentModule = new Module(require.resolve('./foo'));

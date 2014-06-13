@@ -1,3 +1,5 @@
+'use strict';
+
 // http://es5.github.com/#x15.1.1
 
 [

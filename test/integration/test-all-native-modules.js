@@ -1,3 +1,4 @@
+'use strict';
 
 // Assert that we can load all the native modules
 // FRAGILE: this tests that all the native modules we know about work
